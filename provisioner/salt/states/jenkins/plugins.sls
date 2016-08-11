@@ -1,3 +1,36 @@
+{% set jenkins_plugins = [
+     "pipeline-stage-view",
+     "ansicolor",
+     "workflow-aggregator",
+     "mask-passwords",
+     "publish-over-ssh",
+     "ssh-credentials",
+     "scm-api",
+     "tap",
+     "jobConfigHistory",
+     "configurationslicing",
+     "swarm",
+     "job-dsl",
+     "envinject",
+     "git",
+     "bitbucket-oauth",
+     "greenballs",
+     "multiple-scms",
+     "show-build-parameters",
+     "subversion",
+     "copyartifact",
+     "cloudbees-credentials",
+     "groovy",
+     "git-parameter",
+     "bitbucket-build-status-notifier",
+     "bitbucket-pullrequest-builder",
+     "rebuild",
+     "promoted-builds",
+     "parameterized-trigger",
+     "plugin-usage-plugin",
+     "discard-old-build" ]
+%}
+
 updates_dir:
   file.directory:
     - name: /var/lib/jenkins/updates
@@ -13,10 +46,10 @@ updates_defaults:
     - require:
       - file: updates_dir
 
-{% for plugin in salt['pillar.get']('jenkins_plugins') %}
+{% for plugin in jenkins_plugins %}
 install_plugin_{{ plugin }}:
   cmd.run:
-    - name: java -jar /var/cache/jenkins/jenkins-cli.jar -s http://localhost:8080 install-plugin {{ plugin }}
+    - name: java -jar /var/cache/jenkins/jenkins-cli.jar -s http://127.0.0.1:8080 install-plugin {{ plugin }}
     - creates: /var/lib/jenkins/plugins/{{ plugin }}.jpi
     - timeout: 60
     - require:
