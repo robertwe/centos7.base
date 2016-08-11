@@ -47,12 +47,23 @@
     {
       "output": "builds/{{user `box_basename`}}.{{.Provider}}.box",
       "type": "vagrant"
+    },
+    {
+      "type": "atlas",
+      "only": ["virtualbox-iso"],
+      "artifact": "robertwe/centos7-with-jenkins",
+      "artifact_type": "vagrant.box",
+      "metadata": {
+        "provider": "virtualbox",
+        "version": "0.9.0"
+      }
     }
   ],
   "provisioners": [
     {
       "type": "salt-masterless",
-      "local_state_tree": "provisioner/salt/states"
+      "local_state_tree": "provisioner/salt/states",
+      "remote_pillar_roots": "provisioner/salt/pillars"
     },
     {
       "environment_vars": [
