@@ -6,6 +6,13 @@ create_seed_job_dir:
     - makedirs: True
     - require:
       - pkg: install_jenkins_server
+  file.directory:
+    - name: /var/lib/jenkins/jobs/seed/workspace
+    - user: jenkins
+    - group: jenkins
+    - makedirs: True
+    - require:
+      - pkg: install_jenkins_server
 
 upload_{{ job }}_job_config:
   file.managed:
@@ -19,4 +26,3 @@ upload_{{ job }}_job_config:
     - watch_in:
       - cmd: restart_jenkins
 
-{% endfor %}
