@@ -6,6 +6,8 @@ create_seed_job_dir:
     - makedirs: True
     - require:
       - pkg: install_jenkins_server
+
+create_seed_workspace_dir:
   file.directory:
     - name: /var/lib/jenkins/jobs/seed/workspace
     - user: jenkins
