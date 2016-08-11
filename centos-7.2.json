@@ -44,7 +44,7 @@
     }
   ],
   "post-processors": [
-    {
+    [{
       "output": "builds/{{user `box_basename`}}.{{.Provider}}.box",
       "type": "vagrant"
     },
@@ -57,7 +57,7 @@
         "provider": "virtualbox",
         "version": "0.9.1"
       }
-    }
+    }]
   ],
   "provisioners": [
     {
