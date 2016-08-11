@@ -14,7 +14,7 @@ create_seed_job_dir:
     - require:
       - pkg: install_jenkins_server
 
-upload_{{ job }}_job_config:
+upload_seed_job_config:
   file.managed:
     - name: /var/lib/jenkins/jobs/seed/jobs/seed/config.xml
     - source: salt://jenkins/files/jobs/seed/config.xml
