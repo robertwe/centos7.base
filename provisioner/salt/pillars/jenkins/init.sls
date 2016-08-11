@@ -1,0 +1,38 @@
+jenkins_plugins:
+  - pipeline-stage-view
+  - ansicolor
+  - workflow-aggregator
+  - mask-passwords
+  - publish-over-ssh
+  - ssh-credentials
+  - scm-api
+  - tap
+  - thinBackup
+  - jobConfigHistory
+  - configurationslicing
+  - swarm
+  - job-dsl
+  - envinject
+  - git
+  - bitbucket-oauth
+  - greenballs
+  - multiple-scms
+  - show-build-parameters
+  - subversion
+  - copyartifact
+  - cloudbees-credentials
+  - groovy
+  - git-parameter
+  - bitbucket-build-status-notifier
+  - bitbucket-pullrequest-builder
+  - rebuild
+  - promoted-builds
+  - parameterized-trigger
+  - plugin-usage-plugin
+  - discard-old-build
+
+jenkins_user: jenkins
+jenkins_group: jenkins
+jenkins_home: /var/lib/jenkins
+jenkins_cli: /var/cache/jenkins/jenkins-cli.jar
+#jenkins_domain: jenkins-aws.int.proofhq.com
