@@ -4,3 +4,4 @@ base:
     - jenkins.master
     - jenkins.cli
     - jenkins.plugins
+    - jenkins.jobs
