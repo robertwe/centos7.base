@@ -1,7 +1,3 @@
-{% set jenkins_user  = salt['pillar.get']('jenkins_user') %}
-{% set jenkins_group = salt['pillar.get']('jenkins_group') %}
-{% set jenkins_home  = salt['pillar.get']('jenkins_home') %}
-
 jenkins_group:
   group.present:
     - name: jenkins
