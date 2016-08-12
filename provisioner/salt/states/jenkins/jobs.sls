@@ -18,7 +18,7 @@ create_seed_workspace_dir:
 
 upload_seed_job_config:
   file.managed:
-    - name: /var/lib/jenkins/jobs/seed/jobs/seed/config.xml
+    - name: /var/lib/jenkins/jobs/seed/config.xml
     - source: salt://jenkins/files/jobs/seed/config.xml
     - user: jenkins
     - group: jenkins
