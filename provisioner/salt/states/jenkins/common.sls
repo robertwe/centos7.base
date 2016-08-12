@@ -37,6 +37,7 @@ jenkins:
 jenkins_packages:
   pkg.installed:
     - pkgs:
+      - git
       - curl
       - wget
       - mc
