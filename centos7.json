@@ -74,9 +74,9 @@
         "scripts/centos/networking.sh",
         "scripts/common/vagrant.sh",
         "scripts/common/vmtools.sh",
+        "scripts/centos/salt.sh",
         "scripts/centos/cleanup.sh",
         "scripts/common/minimize.sh",
-        "scripts/centos/salt.sh"
       ],
       "type": "shell"
     }
