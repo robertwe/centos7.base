@@ -61,11 +61,6 @@
   ],
   "provisioners": [
     {
-      "type": "salt-masterless",
-      "local_state_tree": "provisioner/salt/states",
-      "remote_pillar_roots": "provisioner/salt/pillars"
-    },
-    {
       "environment_vars": [
         "HOME_DIR=/home/vagrant",
         "http_proxy={{user `http_proxy`}}",
