@@ -76,7 +76,7 @@
         "scripts/common/vmtools.sh",
         "scripts/centos/salt.sh",
         "scripts/centos/cleanup.sh",
-        "scripts/common/minimize.sh",
+        "scripts/common/minimize.sh"
       ],
       "type": "shell"
     }
